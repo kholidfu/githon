@@ -64,7 +64,12 @@ def grab_youtube(url):
     print 'Download started... Please wait...'
 
     title = re.search(re.compile(r"<title>(.*)- YouTube", re.DOTALL), page).group(1).replace('\n', ' ').strip()
-    filename = title.lower().replace(' ', '_')  # advanced_python_or_understanding_python
+
+    try:
+        filename = title.lower().replace(' ', '_')  # advanced_python_or_understanding_python
+    except:
+        # catch the unix reserved characters for filename (/:><|&) n get rid of them
+        filename = title.lower().replace('/', ' ').replace(':', ' ').replace('>', ' ').replace('<', ' ').replace('|', ' ').replace('&', ' ').replace(' ', '_')
 
     # get file extension
     file_ext = urllib.urlopen(url_to_download).info().getheaders("Content-Type")[0].split("/")[1]
