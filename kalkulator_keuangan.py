@@ -39,9 +39,9 @@ while True:
     print 'Nilai NPV Anda adalah %.2f' % npv
     print
 
-    opsi = raw_input('Apakah Anda ingin menghitung lagi? (Ya/Tidak)')
+    opsi = raw_input('Apakah Anda ingin menghitung lagi? (Ya/Tidak) ')
 
-    if opsi == 'Ya':
+    if opsi.lower().startswith('y'):
         continue
     else:
         break
