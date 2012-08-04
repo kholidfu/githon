@@ -1,9 +1,14 @@
 #!/usr/bin/python
+# @sopier
+# Sat Aug  4 12:03:34 WIT 2012
+
+
+# @TODO: exclude non-letter characters from reading
+
 
 """
+read a file and count and rank the words
 """
-
-# how to filter non-letter characters?
 
 def word_counter(fromfile):
     words = {}
