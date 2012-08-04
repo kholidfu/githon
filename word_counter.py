@@ -27,6 +27,8 @@ def word_counter(fromfile):
     for i in sorted(words, key=words.get, reverse=True):
         print i, ':', words[i]
 
+
+
 if __name__ == '__main__':
     word_counter('somefile.txt')
     print '*' * 40
