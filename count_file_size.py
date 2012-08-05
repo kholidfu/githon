@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# @TODO: handle error: file not found?
+# for temporary reason I use simple exception to handle that
 
 import os
 
@@ -14,4 +16,5 @@ for (path, dirs, files) in os.walk(folder):
         except:
             continue
 
-print "Ukuran Folder %s => %.1f MB" % (folder.split('/')[-1], folder_size / (1024*1024.0))
+print "Ukuran Folder %s => %.1f MB" % (folder.split('/')[-1], 
+        folder_size / (1024*1024.0))
