@@ -3,7 +3,9 @@
 # @sopier
 # Tue Aug  7 00:15:29 WIT 2012
 
-"""Simple module to cut long line ( >n characters)"""
+"""Simple module to cut long line ( >n characters)
+Note: You can do this using textwrap library too
+"""
 
 def line_cutter(line, num):
     
