@@ -13,7 +13,6 @@ d{'name': 'sopier'}
 with open('/tmp/mydict.json', mode='w') as f:
     json.dump(d, f)
 
-# using PHP using you can decode using json_decode
-# function
-# $data = json_decode(file_get_contents('/tmp/mydict.json'));
-# var_dump($data);
+# using PHP using you can decode using json_decode function
+# $data = json_decode(file_get_contents('/tmp/mydict.json'), true);
+# foreach($locations['Aceh'] as $l) { echo $l . "<br />"; }
