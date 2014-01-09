@@ -7,7 +7,7 @@ opener = urllib2.build_opener()
 opener.addheaders = [('User-agent', 'Mozilla/5.0')]
 
 with open('/home/banteng/Desktop/vectormetags.txt', 'wa') as f:
-    for i in range(1, 101):
+    for i in range(1, 645):
         print "Starting %s" % url + str(i)
         html = opener.open(url + str(i))
         soup = BeautifulSoup(html)
